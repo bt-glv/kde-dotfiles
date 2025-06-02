@@ -1,0 +1,31 @@
+[1]
+Description=No Maximise (delete if bugs)
+maximizehorizrule=2
+maximizevertrule=2
+wmclass=.+
+wmclassmatch=3
+
+[2]
+Description=No alacritty borders
+noborder=true
+noborderrule=2
+wmclass=[Aa]lacritty
+wmclassmatch=3
+
+[501d8fb3-8d1c-4562-87fc-e47e019a93a4]
+Description=No Maximise (delete if bugs)
+maximizehorizrule=2
+maximizevertrule=2
+wmclass=.+
+wmclassmatch=3
+
+[General]
+count=2
+rules=1,2
+
+[f1bcb144-d4af-409e-933a-d94c5d7ed6d8]
+Description=No alacritty borders
+noborder=true
+noborderrule=2
+wmclass=[Aa]lacritty
+wmclassmatch=3
