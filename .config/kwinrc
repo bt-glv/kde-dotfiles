@@ -1,3 +1,9 @@
+[Activities][LastVirtualDesktop]
+185df1a2-ea8b-4eaf-8177-6002ecd80f21=ab386f10-8e5c-4376-aa52-84440e92a6c4
+
+[Compositing]
+AllowTearing=false
+
 [Desktops]
 Id_1=35008339-6415-4ee5-ab19-a1d31828c882
 Id_2=8b04fde8-36c3-4b6f-8151-999a5494bcf2
@@ -19,6 +25,12 @@ Name_8=9
 Number=9
 Rows=1
 
+[Effect-overview]
+BorderActivate=9
+
+[ElectricBorders]
+TopRight=ApplicationLauncher
+
 [Plugins]
 krohnkiteEnabled=true
 slideEnabled=false
@@ -27,11 +39,21 @@ slideEnabled=false
 floatingClass=Settings,settings
 floatingTitle=Settings,settings
 
+[SubSession: dfb3492f-ba00-4900-bc45-3042ec662cec]
+active=-1
+count=0
+
 [TabBox]
 MultiScreenMode=1
 
 [Tiling]
 padding=4
+
+[Tiling][4ce7aa0d-8fcc-5a07-a51e-561915572abe]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][a74ad1a8-ef74-54d0-8416-b8a3397894b2]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][ae99046a-e227-579b-b791-0633c45a3688]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -42,10 +64,15 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][f155c6cd-9503-5a68-a469-abdcd982e86a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Wayland]
+EnablePrimarySelection=false
+
 [Xwayland]
 Scale=1.25
 
 [org.kde.kdecoration2]
+BorderSize=None
+BorderSizeAuto=false
 ButtonsOnLeft=
 ButtonsOnRight=IX
 library=org.kde.breeze
