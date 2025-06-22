@@ -63,23 +63,23 @@ local function copy_restore(operation, paths)
 
 	local function copy(home_expanded, dirname, path, i)
 
-			sh('mkdir -p '..dirname)
-			local root_name = home_expanded..path
+		sh('mkdir -p '..dirname)
+		local root_name = home_expanded..path
 
-			if sh_syslink_check(root_name) then
-				path = sh('readlink '..root_name).out
-				sh("cp -r "..path.." "..dirname)
-				return
-			end
+		if sh_syslink_check(root_name) then
+			path = sh('readlink '..root_name).out
+			sh("cp -r "..path.." "..dirname)
+			return
+		end
 
-			sh("cp -r "..home_expanded..path.." "..dirname)
-			log("item "..i)
+		sh("cp -r "..home_expanded..path.." "..dirname)
+		log("item "..i)
 	end
+
 	local function paste(home_expanded, dirname, path, i)
-		
-			sh('mkdir -p '..home_expanded..dirname)
-			sh("cp -r "..path.." "..home_expanded..dirname)
-			log("item "..i)
+		sh('mkdir -p '..home_expanded..dirname)
+		sh("cp -r "..path.." "..home_expanded..dirname)
+		log("item "..i)
 	end
 
 	for i, path in ipairs(paths) do
@@ -91,6 +91,8 @@ local function copy_restore(operation, paths)
 		else
 			paste(home_expanded,dirname,path,i)
 		end
+
+		print("\n>\n>Restart your KDE session to apply changes\n>")
 
 	end
 
@@ -117,11 +119,12 @@ if actions[arg[1]] == nil then
 	print("\nNo valid arguments provided\n>> args: copy; paste;backup")
 
 print('\n'..[[
-All available arguments:
+All available options:
 
-copy    -> copies local files to this folder
-paste   -> pastes files on this folder to their respective folders on this comptuer
-backup  -> creates a backup of local files
+copy    -> Copies KDE config files present on this computer to this folder.
+paste   -> Pastes KDE config files present on this folder into this computer.
+		(also generates a backup before doing so)
+backup  -> Creates a backup.
 ]])
 	os.exit()
 end
